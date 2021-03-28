@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+.app {
+  position: relative;
+}
+.big_card {
+  background: linear-gradient(
+    68.7deg,
+    #dfc4e4 5.42%,
+    #cf8afa 35.71%,
+    #5950b9 87.17%
+  );
+}
+.bardown_container {
+  width: 100%;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bardown_element {
+  width: 42%;
+  height: 100%;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  border-right: 1px solid white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bardown_element img {
+  margin-left: 24px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bardown_text {
+  margin-left: 12px;
+  flex: 1;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
   display: flex;
   flex-direction: column;
+}
+.bardown_text strong {
+  font-size: 1.2vw;
+}
+.bardown_text p {
+  font-size: 0.9vw;
+}
+.bardown_social {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+}
+.social_icons {
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
 }
-
-.App-link {
-  color: #61dafb;
+.spacing_big_bg {
+  height: 0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bg_laptop_image {
+  position: absolute;
+  bottom: 8px;
+  right: -24px;
+  width: 53%;
+  object-fit: contain;
+}
+@media screen and (max-width: 800px) {
+  .bardown_container {
+    height: 360px;
+    position: relative;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .bardown_element {
+    width: 100%;
+    border-right: none;
+  }
+  .big_paper {
+    height: 840px !important;
+  }
+  .bardown_text strong {
+    font-size: 4vw;
+  }
+  .bardown_text p {
+    font-size: 3vw;
+  }
+  .bg_laptop_image {
+    display: none;
   }
 }
